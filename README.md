@@ -4,7 +4,7 @@ _Simple Uniform Grid for Xamarin.Forms_
 
 
 
-![alt text](https://github.com/Jouna77/Xamarin.Forms.UniformGrid/new/master/image.png?raw=true)
+![Example](https://github.com/Jouna77/Xamarin.Forms.UniformGrid/blob/master/image.png?raw=true)
 
 
 ### Instalación 🔧
