@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:uniformgrid="clr-namespace:UniformGrid;assembly=UniformGrid"
+             mc:Ignorable="d"
+             x:Class="UniformGridSample.MainPage">
+
+    <StackLayout>
+        <Label TextColor="Black" HorizontalOptions="Center" Text="Uniform grid sample"/>
+        <uniformgrid:UniformGrid ColumnSpacing="0" RowSpacing="0" BackgroundColor="Blue">
+            <BoxView BackgroundColor="Red"/>
+            <BoxView BackgroundColor="#E94D4D"/>
+            <BoxView BackgroundColor="#F19999"/>
+            <BoxView BackgroundColor="#F4C2C2"/>
+        </uniformgrid:UniformGrid>
+        <uniformgrid:UniformGrid>
+            <Frame BackgroundColor="AliceBlue">
+                <Label Text="1"/>
+            </Frame>
+            <Frame BackgroundColor="Cornsilk">
+                <Label Text="2"/>
+            </Frame>
+            <Frame BackgroundColor="DarkSalmon">
+                <Label Text="3"/>
+            </Frame>
+            <Frame BackgroundColor="Gainsboro">
+                <Label Text="4"/>
+            </Frame>
+            <Frame BackgroundColor="LightBlue">
+                <Label Text="5"/>
+            </Frame>
+            <Frame BackgroundColor="MediumAquamarine">
+                <Label Text="6"/>
+            </Frame>
+            <Frame BackgroundColor="MistyRose">
+                <Label Text="7"/>
+            </Frame>
+        </uniformgrid:UniformGrid>
+       
+
+        <Label TextColor="Black" HorizontalOptions="Center" Text="Uniform grid DataBinding and Template"/>
+        <uniformgrid:UniformGrid VerticalOptions="FillAndExpand" BindableLayout.ItemsSource="{Binding UniformModel,Items}" ColumnSpacing="0" RowSpacing="0" BackgroundColor="Blue">
+            <BindableLayout.EmptyView>
+                <Label Text="No data"/>
+            </BindableLayout.EmptyView>
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="5" BackgroundColor="LightBlue" BorderColor="MidnightBlue">
+                        <Label Text="{Binding Numero}" TextColor="Black"/>
+                    </Frame>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </uniformgrid:UniformGrid>
+        <Button Text="Add Item" Clicked="AddItem"/>
+        <Button Text="Remove Item" Clicked="RemoveItem"/>
+
+
+    </StackLayout>
+
+</ContentPage>
