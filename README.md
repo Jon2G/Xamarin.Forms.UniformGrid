@@ -30,6 +30,7 @@ _Items Source Binding_
         </uniformgrid:UniformGrid>
 ```
 _Sample_
+```
         <uniformgrid:UniformGrid>
             <Frame BackgroundColor="AliceBlue">
                 <Label Text="1"/>
@@ -53,6 +54,6 @@ _Sample_
                 <Label Text="7"/>
             </Frame>
         </uniformgrid:UniformGrid>
-
+```
 ## Thank you 🎁
 * Please feel free to colaborate ☕.
