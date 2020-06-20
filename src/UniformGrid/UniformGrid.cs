@@ -42,19 +42,14 @@ namespace UniformGrid
 
         private void RefreshLayout()
         {
-            this.ColumnDefinitions.Clear();
-            int ColsRows = (int)Math.Round(((double)this.Children.Count) / 2, 0);
-            for (int i = 0; i < ColsRows; i++)
-            {
-                this.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
-            }
+            int ColsRows = (int)Math.Floor(this.Children.Count / 2f);
 
             int row = 0;
             int column = 0;
 
             for (int i = 0; i < this.Children.Count; i++)
             {
-                if (column >= ColsRows)
+                if (column >= ColsRows && this.Children.Count > 3)
                 {
                     row++;
                     column = 0;
@@ -63,7 +58,7 @@ namespace UniformGrid
                 Grid.SetRow(this.Children[i], row);
                 column++;
             }
-            OnChildMeasureInvalidated();
+            InvalidateLayout();
             this.Rows =
             this.Columns = ColsRows;
         }

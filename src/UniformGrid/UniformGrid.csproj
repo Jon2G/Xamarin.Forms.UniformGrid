@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageId>Jouna77.UniformGrid</PackageId>
+    <Description>Simple UniformGrid for Xamarin Forms
+</Description>
+    <RepositoryUrl>https://github.com/Jouna77/Xamarin.Forms.UniformGrid</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>Xamarin,Forms,UniformGrid,Grid,Layout</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

@@ -8,6 +8,8 @@
              x:Class="UniformGridSample.MainPage">
 
     <StackLayout>
+
+        
         <Label TextColor="Black" HorizontalOptions="Center" Text="Uniform grid sample"/>
         <uniformgrid:UniformGrid ColumnSpacing="0" RowSpacing="0" BackgroundColor="Blue">
             <BoxView BackgroundColor="Red"/>
@@ -22,7 +24,7 @@
             <Frame BackgroundColor="Cornsilk">
                 <Label Text="2"/>
             </Frame>
-            <Frame BackgroundColor="DarkSalmon">
+            <!--<Frame BackgroundColor="DarkSalmon">
                 <Label Text="3"/>
             </Frame>
             <Frame BackgroundColor="Gainsboro">
@@ -36,12 +38,12 @@
             </Frame>
             <Frame BackgroundColor="MistyRose">
                 <Label Text="7"/>
-            </Frame>
+            </Frame>-->
         </uniformgrid:UniformGrid>
        
 
         <Label TextColor="Black" HorizontalOptions="Center" Text="Uniform grid DataBinding and Template"/>
-        <uniformgrid:UniformGrid VerticalOptions="FillAndExpand" BindableLayout.ItemsSource="{Binding UniformModel,Items}" ColumnSpacing="0" RowSpacing="0" BackgroundColor="Blue">
+        <uniformgrid:UniformGrid VerticalOptions="FillAndExpand" BindableLayout.ItemsSource="{Binding Items,Mode=OneWay}" ColumnSpacing="0" RowSpacing="0" BackgroundColor="Blue">
             <BindableLayout.EmptyView>
                 <Label Text="No data"/>
             </BindableLayout.EmptyView>
